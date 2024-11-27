@@ -3,6 +3,8 @@ import localFont from 'next/font/local';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import './globals.css';
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import '../lib/fontawesome';
 
 const geistSans = localFont({
 	src: './fonts/GeistVF.woff',
@@ -33,10 +35,14 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${Poppins.variable} ${geistSans.variable} ${MarckScript.variable} antialiased`}
+				className={`${Poppins.variable} ${geistSans.variable} ${MarckScript.variable} antialiased bg-purple-100 text-gray-900`}
 			>
 				<Navbar />
-				{children}
+				<div className="px-32">
+					<main className="min-h-screen bg-purple-200">
+						{children}
+					</main>
+				</div>
 				<Footer />
 			</body>
 		</html>
