@@ -35,11 +35,11 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${Poppins.variable} ${geistSans.variable} ${MarckScript.variable} antialiased bg-purple-100 text-gray-900`}
+				className={`${Poppins.variable} ${geistSans.variable} ${MarckScript.variable} antialiased bg-gray-50 text-gray-900`}
 			>
 				<Navbar />
 				<div className="px-32">
-					<main className="min-h-screen bg-purple-200">
+					<main className="min-h-screen">
 						{children}
 					</main>
 				</div>
