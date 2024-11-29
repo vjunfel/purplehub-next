@@ -28,7 +28,7 @@ function Navbar() {
 		<nav className="font-[family-name:var(--font-poppins)] bg-white h-20 row-start-3 flex gap-6 flex-wrap items-center justify-between xl:px-40 md:px-10 px-5 border-b">
 				<Link href="/" className="flex items-center justify-center">
 					<Image
-						src="/logo_nav.png"
+						src="/images/logo_nav.png"
 						alt="logo"
 						width={64}
 						height={64}
