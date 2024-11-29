@@ -2,7 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-function Hero() {
+
+const Hero: React.FC = () => {
 	return (
 		<div className="flex flex-col md:flex-row py-20 gap-16 md:px-16">
 			<div className="flex flex-col flex-1 gap-10 justify-center">
@@ -31,7 +32,7 @@ function Hero() {
 				/>
 			</div>
 		</div>
-	);
+	)
 }
 
 export default Hero;

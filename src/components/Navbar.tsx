@@ -1,3 +1,23 @@
+// components/Navbar.tsx
+// import React from 'react';
+
+// const Navbar: React.FC = () => {
+// 	return (
+// 		<nav className="bg-purple-700 text-white p-4">
+// 			<div className="container mx-auto flex justify-between items-center">
+// 				<h1 className="text-xl font-bold">Asuncion&apos;s Purplehub</h1>
+// 				<ul className="flex space-x-4">
+// 					<li><a href="#" className="hover:underline">Home</a></li>
+// 					<li><a href="#" className="hover:underline">Products</a></li>
+// 					<li><a href="#" className="hover:underline">Contact</a></li>
+// 				</ul>
+// 			</div>
+// 		</nav>
+// 	);
+// };
+
+// export default Navbar;
+
 import React from 'react';
 import Image from 'next/image';
 import { Menu } from 'lucide-react';
