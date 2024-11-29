@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
 					inventore delectus ipsam ea?
 				</p>
         <Link href="/contact">
-				<button className="py-2 px-4 bg-purple-900 text-white w-fit rounded">
+				<button className="py-2 px-4 bg-purple-950 hover:bg-purple-800 text-white w-fit rounded">
 					ORDER NOW
 				</button>
         </Link>
