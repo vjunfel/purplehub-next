@@ -11,17 +11,18 @@ function MenuPage() {
 				{menuData.map((item, index) => (
 					<li
 						key={index}
-						className="bg-white py-4 border overflow-hidden w-[400px] h-[460px] flex flex-col items-center mb-10 rounded-xl"
+						className="bg-white py-4 border overflow-hidden w-[400px] h-[460px] flex flex-col items-center justify-between mb-10 rounded-xl"
 					>
 						<MenuCard
 							imgSrc={item.imgSrc}
 							alt={item.alt}
 							width={300}
 							height={300}
-							className="flex items-center justify-center bg-white w-[500px] h-[280px]"
 						/>
-						<h3 className="text-2xl text-center h-5 my-5">{item.name}</h3>
-						<p className="text-md mt-2 px-6">{item.description}</p>
+						<div className='flex flex-col items-end justify-start h-40 p-6'>
+							<h3 className="w-full text-2xl text-start mb-4 ">{item.name}</h3>
+							<p className="text-md">{item.description}</p>
+						</div>
 					</li>
 				))}
 			</ul>

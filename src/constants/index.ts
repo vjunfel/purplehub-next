@@ -49,7 +49,7 @@ export const menuData = [
 	},
 	{
 		name: "Ube Tres Leches Cake",
-		description: "A moist ube cake soaked in a mixture of three types of milk (evaporated, condensed, and cream).",
+		description: "A moist ube cake soaked in a mixture of three types of milk.",
 		imgSrc: '/images/menu9.jpg',
 		alt: 'alt'
 	},
