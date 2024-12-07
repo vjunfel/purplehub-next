@@ -11,17 +11,17 @@ const Navbar: React.FC = () => {
 				color={'black'}
 				className="flex lg:hidden"
 			/>
-			<ul className="hidden lg:flex flex-row text-gray-900  gap-12 flex-1">
-				<li className='hover:text-purple-900'>
+			<ul className="hidden lg:flex flex-row text-gray-900  gap-12 flex-1 items-center">
+				<li className='border-b-2 border-transparent hover:border-purple-800 py-1'>
 					<Link href="/">Home</Link>
 				</li>
-				<li className='hover:text-purple-900'>
+				<li className="border-b-2 border-transparent hover:border-purple-800 py-1">
 					<Link href="/menu">Menu</Link>
 				</li>
-				<li className='hover:text-purple-900'>
+				<li className="border-b-2 border-transparent hover:border-purple-800 py-1">
 					<Link href="/about">About</Link>
 				</li>
-				<li className='hover:text-purple-900'>
+				<li className="border-b-2 border-transparent hover:border-purple-800 py-1">
 					<Link
 						href="/"
 						className="flex items-center justify-center"
@@ -40,15 +40,15 @@ const Navbar: React.FC = () => {
 				</Link>
 			</div>
 			<ul className="hidden w-full lg:flex flex-row gap-12 flex-1 justify-end">
-				<li className='hover:text-purple-900'>
+				<li className="border-b-2 border-transparent hover:border-purple-800 py-1">
 					<Link
 						href="/stores"
-						className="rounded  px-4 py-2"
+						className="rounded py-2"
 					>
 						Store location
 					</Link>
 				</li>
-				<li className='hover:text-purple-900'>
+				<li className="border-b-2 border-transparent hover:border-purple-800 py-1">
 					<Link
 						href="/contact"
 						className="rounded bg-purple-950 hover:bg-purple-800 text-white px-4 py-2 "
