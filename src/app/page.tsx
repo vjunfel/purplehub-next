@@ -3,9 +3,9 @@ import '../lib/fontawesome';
 
 const Home: React.FC = () => {
 	return (
-		<main className="font-[family-name:var(--font-poppins)] min-h-screen bg-gray-50 text-gray-900 xl:px-40 md:px-10 px-5">
+		<div className="font-[family-name:var(--font-poppins)] min-h-screen bg-gray-50 text-gray-900 flex flex-col justify-center items-center">
       <Hero />
-		</main>
+		</div>
 	);
 }
 
