@@ -23,7 +23,7 @@ const SwiperComponent = () => {
 			spaceBetween={0}
 			autoplay={{ delay: 3000 }}
 			modules={[Autoplay]}
-			className="w-full flex justify-center items-center mx-auto"
+			className="w-full flex justify-center items-center mx-auto mt-[80px]"
 		>
 			{sliderImages.map((item, index) => (
 				<SwiperSlide key={index}>

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Navbar: React.FC = () => {
 	return (
-		<nav className="font-[family-name:var(--font-poppins)] bg-white h-20 row-start-3 flex flex-wrap items-center justify-between xl:px-40 md:px-10 px-5 border-b">
+		<nav className="font-[family-name:var(--font-poppins)] fixed z-10 w-full bg-white h-20 row-start-3 flex flex-wrap items-center justify-between xl:px-40 md:px-10 px-5 border-b">
 			<Menu
 				size={32}
 				color={'black'}
