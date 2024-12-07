@@ -6,7 +6,6 @@ interface MenuCardProps {
 	alt: string;
 	width: number;
 	height: number;
-	className: string;
 }
 
 const MenuCard: React.FC<MenuCardProps> = ({
@@ -14,10 +13,9 @@ const MenuCard: React.FC<MenuCardProps> = ({
 	alt,
 	width,
 	height,
-	className,
 }) => {
 	return (
-		<div className={className}>
+		<div className="bg-white h-[300px] overflow-hidden">
 			<Image
 				src={imgSrc}
 				alt={alt}
