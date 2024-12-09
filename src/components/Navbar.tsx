@@ -1,9 +1,21 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
+import MobileMenu from './MobileMenu';
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 const Navbar: React.FC = () => {
+	const [isOpen, setIsOpen] = useState<boolean>(false)
+	const isMobile = useIsMobile();
+	
+	const clickHandler = () => {
+		setIsOpen(open => !open)
+		console.log('Clicked to open')
+	}
+	
 	return (
 		<nav className="font-[family-name:var(--font-poppins)] fixed z-10 w-full bg-white h-20 row-start-3 flex flex-wrap items-center justify-between xl:px-40 md:px-10 px-5 border-b">
 			<ul className="hidden lg:flex flex-row text-gray-900  gap-12 flex-1 items-center">
@@ -44,7 +56,7 @@ const Navbar: React.FC = () => {
 						Store locations
 					</Link>
 				</li>
-				<li className="border-b-2 border-transparent hover:border-purple-800 py-1">
+				<li className="border-b-2 border-transparent py-1">
 					<Link
 						href="/contact"
 						className="rounded bg-purple-950 hover:bg-purple-800 text-white px-4 py-2 "
@@ -53,11 +65,17 @@ const Navbar: React.FC = () => {
 					</Link>
 				</li>
 			</ul>
-			<Menu
-				size={32}
-				color={'black'}
-				className="flex lg:hidden"
-			/>
+			{isMobile && 
+				<Menu
+					size={32}
+					color={'black'}
+					className="flex lg:hidden cursor-pointer"
+					onClick={clickHandler}
+				/>
+			}
+			
+			{isOpen && <MobileMenu />}
+			
 		</nav>
 	);
 };
