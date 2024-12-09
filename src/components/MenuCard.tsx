@@ -15,7 +15,7 @@ const MenuCard: React.FC<MenuCardProps> = ({
 	height,
 }) => {
 	return (
-		<div className="bg-white h-[300px] overflow-hidden">
+		<div className="bg-white h-[300px] overflow-hidden ">
 			<Image
 				src={imgSrc}
 				alt={alt}

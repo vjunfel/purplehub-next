@@ -15,11 +15,11 @@ const BestSeller = () => {
         </Link>
       </div>
 			
-			<ul className="columns-1 lg:columns-2 xl:columns-3 gap-12">
+			<ul className="columns-1 lg:columns-2 xl:columns-3 gap-12 md:px-6 lg:px-10">
 				{bestSeller.map((item, index) => (
 					<li
 						key={index}
-						className="relative bg-white py-4 border overflow-hidden w-[400px] h-[460px] flex flex-col items-center justify-between rounded-xl mb-6"
+						className="relative bg-white py-4 border overflow-hidden w-full md:w-[420px] h-[460px] flex flex-col items-center justify-between rounded-xl mb-6"
 					>
 						<span className="absolute top-8 right-10 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">
 							Hot

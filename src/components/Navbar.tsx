@@ -6,11 +6,6 @@ import Link from 'next/link';
 const Navbar: React.FC = () => {
 	return (
 		<nav className="font-[family-name:var(--font-poppins)] fixed z-10 w-full bg-white h-20 row-start-3 flex flex-wrap items-center justify-between xl:px-40 md:px-10 px-5 border-b">
-			<Menu
-				size={32}
-				color={'black'}
-				className="flex lg:hidden"
-			/>
 			<ul className="hidden lg:flex flex-row text-gray-900  gap-12 flex-1 items-center">
 				<li className='border-b-2 border-transparent hover:border-purple-800 py-1'>
 					<Link href="/">Home</Link>
@@ -29,7 +24,7 @@ const Navbar: React.FC = () => {
 				</li>
 			</ul>
 			<div>
-				<Link href="/">
+				<Link href="/" className='flex flex-row items-center'>
 					<Image
 						src="/images/Logo-Purplehub.svg"
 						alt="logo"
@@ -37,6 +32,7 @@ const Navbar: React.FC = () => {
 						height={64}
 						className="width-auto"
 					/>
+					<span className='font-[family-name:var(--font-marck-script)] text-2xl text-purple-950 ml-2 hidden sm:flex lg:hidden '>Asuncion&apos;s Purplehub</span>
 				</Link>
 			</div>
 			<ul className="hidden w-full lg:flex flex-row gap-12 flex-1 justify-end">
@@ -45,7 +41,7 @@ const Navbar: React.FC = () => {
 						href="/stores"
 						className="rounded py-2"
 					>
-						Store location
+						Store locations
 					</Link>
 				</li>
 				<li className="border-b-2 border-transparent hover:border-purple-800 py-1">
@@ -57,6 +53,11 @@ const Navbar: React.FC = () => {
 					</Link>
 				</li>
 			</ul>
+			<Menu
+				size={32}
+				color={'black'}
+				className="flex lg:hidden"
+			/>
 		</nav>
 	);
 };
