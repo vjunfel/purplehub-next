@@ -7,12 +7,23 @@ function MenuPage() {
 		<div className="pt-[80px] bg-violet-50 w-full min-h-screen text-gray-900 flex flex-col justify-center items-center">
 			<h1 className="my-10 text-4xl text-gray-700">Our Products</h1>
 			
-			<ul className="columns-1 md:columns-2 lg:columns-2 xl:columns-3 gap-12 mb-16">
+			<ul className="columns-1 lg:columns-2 xl:columns-3 gap-12 mb-16 px-4 md:px-6 lg:px-10">
 				{menuData.map((item, index) => (
 					<li
 						key={index}
-						className="bg-white py-4 border overflow-hidden w-[400px] h-[460px] flex flex-col items-center justify-between mb-10 rounded-xl"
+						className="relative bg-white py-4 border overflow-hidden w-full md:w-[420px] h-[460px] flex flex-col items-center justify-between mb-10 rounded-xl"
 					>
+						{item.category === 'new' && 
+							<span className="absolute top-8 right-10 transform translate-x-1/2 -translate-y-1/2 bg-green-700 text-white text-xs font-bold px-3 py-1 rounded-full">
+								New
+							</span>
+						}
+						{item.category === 'best-seller' && 
+							<span className="absolute top-8 right-10 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+								Hot
+							</span>
+						}
+						
 						<MenuCard
 							imgSrc={item.imgSrc}
 							alt={item.alt}
