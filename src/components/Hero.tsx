@@ -1,22 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import SwiperComponent from './SwiperComponent';
 import heroImage from '../../public/images/hero_img.png'
 import celebrateImage from '../../public/images/celebrate.jpg'
 
 const Hero: React.FC = () => {
 	return (
 		<>
-			<SwiperComponent />
-			<div className="flex lg:flex-col xl:px-40 md:px-10 px-5">
-				<div className='flex flex-col md:flex-row gap-16 bg-slate-50 w-full py-20 md:px-16"'>
+			<div className="max-w-screen-2xl flex lg:flex-col md:px-10 px-5 w-full">
+				<div className='flex flex-col md:flex-row gap-16  w-full py-20 md:px-16 rounded-3xl'>
 					<div className="flex flex-col flex-1 gap-10 justify-center">
-						<h2 className="font-[family-name:var(--font-marck-script)] text-5xl text-purple-900">
+						<h2 className="font-[family-name:var(--font-marck-script)] text-3xl lg:text-5xl text-purple-900 ">
 							Baked with premium ingredients with just the right
 							sweetness.
 						</h2>
-						
 						<div className='flex flex-col gap-2'>
 							<p><span className='text-green-600'>✔</span> ORGANIC UBE farmed by local farmers</p>
 							<p><span className='text-green-600'>✔</span> NO added preservatives</p>
@@ -32,28 +29,28 @@ const Hero: React.FC = () => {
 							</button>
 						</Link>
 					</div>
-
 					<div className="flex-1 flex md:justify-end justify-center">
 						<Image
 							src={heroImage}
 							alt="cake"
+							className='md:w-[300px] md:h-[350px] lg:w-[446px] lg:h-[505px]'
 						/>
 					</div>
 				</div>
 			</div>
 			
-			<div className="flex lg:flex-col xl:px-40 md:px-10 px-5 w-full">
-				<div className='flex flex-col md:flex-row gap-16 bg-slate-50 w-full py-20 md:px-16"'>
+			<div className="max-w-screen-2xl w-full flex p-5 lg:flex-col md:p-10 lg:p-20 xl:pb-32">
+				<div className='flex flex-col md:flex-row gap-16 bg-purple-300 w-full p-10 md:p-16 rounded-3xl'>
 					<div className="flex-1 flex md:justify-start justify-center">
 						<Image
 							src={celebrateImage}
 							alt="cake"
-							width={450}
-							className='rounded-tr-3xl rounded-bl-3xl'
+							// width={450}
+							className='rounded-tr-3xl rounded-bl-3xl w-[320px] md:w-[450px]'
 						/>
 					</div>
-					<div className="flex flex-col flex-1 gap-10 justify-center">
-						<h2 className="font-[family-name:var(--font-marck-script)] text-5xl text-purple-900">
+					<div className="flex flex-col flex-1 gap-10 justify-center ">
+						<h2 className="font-[family-name:var(--font-marck-script)] text-3xl lg:text-5xl text-purple-900">
 							Make every celebration memorable with joy!
 						</h2>
 						
@@ -69,8 +66,6 @@ const Hero: React.FC = () => {
 							</button>
 						</Link>
 					</div>
-
-					
 				</div>
 			</div>
 		</>
