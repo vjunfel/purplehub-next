@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
 						height={64}
 						className="width-auto"
 					/>
-					<span className='font-[family-name:var(--font-marck-script)] text-2xl text-purple-950 ml-2 hidden sm:flex lg:hidden '>Asuncion&apos;s Purplehub</span>
+					<span className='font-[family-name:var(--font-marck-script)] text-2xl text-purple-950 ml-2 lg:hidden '>Asuncion&apos;s Purplehub</span>
 				</Link>
 			</div>
 			<ul className="hidden w-full lg:flex flex-row gap-12 flex-1 justify-end">
