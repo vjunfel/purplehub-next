@@ -6,8 +6,8 @@ import Logo from '../../public/images/Logo-Purplehub-white.svg'
 
 const Footer: React.FC = () => {
 	return (
-		<footer className="font-[family-name:var(--font-poppins)] text-white w-full bg-gradient-to-r from-purple-500 from-10% via-purple-700 via-50% to-purple-950">
-			<div className="max-w-screen-2xl mx-auto py-16  flex flex-col md:flex-row">
+		<footer className="font-[family-name:var(--font-poppins)] text-white w-full bg-gradient-to-r from-purple-500 from-10% via-purple-700 via-50% to-purple-950 ">
+			<div className="max-w-screen-2xl mx-auto py-16  flex flex-col md:flex-row border-t">
 				<div className="flex flex-col justify-between flex-1 lg:flex-row md:ml-6">
 					<div className='flex justify-center md:justify-start'>
 						<Image 
