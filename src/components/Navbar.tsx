@@ -5,11 +5,9 @@ import Image from 'next/image';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
 import MobileMenu from './MobileMenu';
-import { useIsMobile } from '@/hooks/useIsMobile';
 
 const Navbar: React.FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
-	const isMobile = useIsMobile();
 	
 	const clickHandler = () => {
 		setIsOpen(open => !open)
@@ -19,7 +17,7 @@ const Navbar: React.FC = () => {
 	return (
 		<nav className="font-[family-name:var(--font-poppins)] fixed z-10 w-full bg-white h-20 row-start-3 flex flex-wrap items-center justify-between xl:px-40 md:px-10 px-5 border-b">
 			<ul className="hidden lg:flex flex-row text-gray-900  gap-12 flex-1 items-center">
-				<li className='border-b-2 border-transparent hover:border-purple-800 py-1'>
+				<li className="border-b-2 border-transparent hover:border-purple-800 py-1">
 					<Link href="/">Home</Link>
 				</li>
 				<li className="border-b-2 border-transparent hover:border-purple-800 py-1">
@@ -35,6 +33,7 @@ const Navbar: React.FC = () => {
 					></Link>
 				</li>
 			</ul>
+			
 			<div>
 				<Link href="/" className='flex flex-row items-center'>
 					<Image
@@ -44,9 +43,10 @@ const Navbar: React.FC = () => {
 						height={64}
 						className="width-auto"
 					/>
-					<span className='font-[family-name:var(--font-marck-script)] text-2xl text-purple-950 ml-2 lg:hidden '>Asuncion&apos;s Purplehub</span>
+					<span className='font-[family-name:var(--font-marck-script)] text-2xl text-purple-950 ml-2 hidden xs:flex lg:hidden '>Asuncion&apos;s Purplehub</span>
 				</Link>
 			</div>
+			
 			<ul className="hidden w-full lg:flex flex-row gap-12 flex-1 justify-end">
 				<li className="border-b-2 border-transparent hover:border-purple-800 py-1">
 					<Link
@@ -65,17 +65,14 @@ const Navbar: React.FC = () => {
 					</Link>
 				</li>
 			</ul>
-			{isMobile && 
-				<Menu
-					size={32}
-					color={'black'}
-					className="flex lg:hidden cursor-pointer"
-					onClick={clickHandler}
-				/>
-			}
 			
-			{isOpen && <MobileMenu />}
-			
+			<Menu
+				size={32}
+				color={'black'}
+				className="flex lg:hidden cursor-pointer"
+				onClick={clickHandler}
+			/>
+			{isOpen && <MobileMenu setIsOpen={setIsOpen} />}
 		</nav>
 	);
 };
