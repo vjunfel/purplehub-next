@@ -8,7 +8,7 @@ export const useIsMobile = () => {
     if (typeof window === 'undefined') return; // Guard for SSR
 
     // Check if the viewport width is mobile
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const mediaQuery = window.matchMedia('(max-width: 1024px)');
     const handleChange = () => setIsMobile(mediaQuery.matches);
 
     // Set the initial value and listen for changes
