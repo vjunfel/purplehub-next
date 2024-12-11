@@ -2,8 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-// import Logo from '../../public/images/Logo-Purplehub-white.svg'
-// import Logo from '../../public/images/Logo-Purplehub.svg'
 
 const Footer: React.FC = () => {
 	return (
@@ -13,7 +11,7 @@ const Footer: React.FC = () => {
 					<div className='flex justify-center md:justify-start'>
 						<Image 
 							// src={Logo} 
-							src="/images/logo_nav2.jpg"
+							src="/images/logo_nav.jpg"
 							width={80} 
 							height={80}
 							alt="Logo" 
