@@ -6,7 +6,7 @@ import BestSeller from "@/components/BestSeller";
 
 const Home: React.FC = () => {
 	return (
-		<div className="font-[family-name:var(--font-poppins)] min-h-screen w-full bg-slate-50 text-gray-900 flex flex-col justify-center items-center">
+		<div className="font-[family-name:var(--font-poppins)] min-h-screen w-full bg-slate-50 text-gray-900 flex flex-col justify-center items-center ">
       <SwiperComponent />
 			<Hero />
 			<BestSeller />

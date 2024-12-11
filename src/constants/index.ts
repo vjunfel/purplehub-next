@@ -108,3 +108,24 @@ export const menuData = [
 		id: 12
 	},
 ]
+
+export const storeData = [
+	{
+		name: "Surigao",
+		address: "1340 Vascquez St., Corner Gimena, Brgy. Washington, Surigao, SDN",
+		phone: "09175300549 / 09199503051",
+		email: "btvp79@yahoo.com",
+		branch: "Main branch",
+		time: "9:00 AM - 7:00 PM"
+	},
+	{
+		name: "Lapu-lapu City",
+		address: "RBI Commercial Center Ground floor, Unit #2 M.L. Quezon National Highway, Brgy Pajo, Lapu Lapu City, Cebu (before PLDT & McDonald's from the 1st Bridge)",
+		phone: "(032) 503 0416 / 639099421304",
+		email: "btvp79@yahoo.com",
+		branch: "branch",
+		time: "9:00 AM - 7:00 PM"
+	},
+]
+
+// before PLDT & McDonald's from the 1st Bridge) Contact numbers: +639099421304 +639083101626 , Lapu-Lapu City
