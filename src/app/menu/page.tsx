@@ -4,7 +4,7 @@ import { menuData } from '@/constants';
 
 function MenuPage() {
 	return (
-		<div className="pt-[160px] w-full min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-purple-500 from-10% via-purple-700 via-50% to-purple-950">
+		<div className="pt-[80px] lg:pt-[160px] w-full min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-purple-500 from-10% via-purple-700 via-50% to-purple-950">
 			<h2 className="my-10 text-5xl text-white">Our Products</h2>
 			
 			<div className='flex md:flex-row flex-col items-center justify-evenly gap-2 md:gap-12 mb-12 w-full max-w-screen-2xl text-gray-100 p-4 rounded-lg'>
