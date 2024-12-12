@@ -26,10 +26,11 @@ const BestSeller = () => {
 						</span>
 						
 							<MenuCard
-								imgSrc={item.imgSrc}
+								src={item.imgSrc}
 								alt={item.alt}
 								width={300}
 								height={300}
+								className="w-auto h-auto"
 							/>
             
 						<div className='flex flex-col items-end justify-start md:h-40 xs:h-auto p-6'>

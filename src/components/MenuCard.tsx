@@ -2,22 +2,24 @@ import Image from 'next/image';
 import React from 'react';
 
 interface MenuCardProps {
-	imgSrc: string;
+	src: string;
 	alt: string;
 	width: number;
 	height: number;
+	className: string
 }
 
 const MenuCard: React.FC<MenuCardProps> = ({
-	imgSrc,
+	src,
 	alt,
 	width,
 	height,
+	className,
 }) => {
 	return (
-		<div className="bg-white h-[300px] overflow-hidden ">
+		<div className={`bg-white h-[300px] overflow-hidden ${className}`}>
 			<Image
-				src={imgSrc}
+				src={src}
 				alt={alt}
 				width={width}
 				height={height}
