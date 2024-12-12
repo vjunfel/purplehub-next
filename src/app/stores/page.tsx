@@ -1,8 +1,8 @@
 import React from 'react'
-import store from '../../../public/images/store.jpg'
 import Image from 'next/image'
 import { storeData } from '@/constants'
 import { MapPin, Phone, Timer } from 'lucide-react'
+import store from '../../../public/images/store.jpg'
 
 const StoresLocation: React.FC = () => {
 	return (
@@ -38,13 +38,13 @@ const StoresLocation: React.FC = () => {
 								</div>
 							</div>
 						))}
-						
 					</div>
+					
 					<div className="flex-1 flex md:justify-end justify-center">
 						<Image
 							src={store}
 							alt="cake"
-							className='md:w-[300px] md:h-[350px] lg:w-[446px] lg:h-[505px]'
+							className='md:w-[300px] md:h-[350px] lg:w-[446px] lg:h-[505px] rounded-md'
 						/>
 					</div>
 				</div>

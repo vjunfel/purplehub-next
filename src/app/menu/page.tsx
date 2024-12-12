@@ -36,12 +36,13 @@ function MenuPage() {
 								Hot
 							</span>
 						}
-						
+												
 						<MenuCard
-							imgSrc={item.imgSrc}
+							src={item.imgSrc || '/images/img-not-found.jpg'}
 							alt={item.alt}
 							width={300}
 							height={300}
+							className="w-auto h-auto"
 						/>
 						<div className='flex flex-col items-end justify-start h-40 p-6'>
 							<h3 className="w-full text-2xl text-start mb-4 ">{item.name}</h3>

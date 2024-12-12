@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import Logo from '../../public/images/logo_nav.jpg'
 
 const Footer: React.FC = () => {
 	return (
@@ -10,8 +11,8 @@ const Footer: React.FC = () => {
 				<div className="w-full flex flex-col justify-between flex-2 lg:flex-row md:ml-6 lg:ml-10">
 					<div className='flex justify-center md:justify-start'>
 						<Image 
-							// src={Logo} 
-							src="/images/logo_nav.jpg"
+							src={Logo} 
+							// src="/images/logo_nav.jpg"
 							width={80} 
 							height={80}
 							alt="Logo" 

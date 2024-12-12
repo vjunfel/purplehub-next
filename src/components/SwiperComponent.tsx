@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -9,10 +8,19 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/free-mode';
 
+import slider1 from '../../public/images/slider/slider1.webp'
+import slider2 from '../../public/images/slider/slider2.webp'
+import slider3 from '../../public/images/slider/slider3.webp'
+
+// const sliderImages = [
+// 	'/images/slider/slider1.webp',
+// 	'/images/slider/slider2.webp',
+// 	'/images/slider/slider3.webp',
+// ];
 const sliderImages = [
-	'/images/slider/slider1.webp',
-	'/images/slider/slider2.webp',
-	'/images/slider/slider3.webp',
+	slider1,
+	slider2,
+	slider3,
 ];
 
 const SwiperComponent = () => {
