@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
 				<li className="border-b-2 border-transparent py-1">
 					<Link
 						href="/contact"
-						className="rounded bg-white hover:bg-purple-100 text-purple-950 px-4 py-2 "
+						className="rounded bg-white hover:bg-purple-100 text-purple-950 px-4 py-2 active:bg-purple-300"
 					>
 						Contact
 					</Link>
