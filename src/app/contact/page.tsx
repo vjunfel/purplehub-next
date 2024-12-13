@@ -5,8 +5,6 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { LoaderCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 // import ContactInfo from '@/components/ContactInfo';
 
 const ContactPage: React.FC = () => {
@@ -15,49 +13,45 @@ const ContactPage: React.FC = () => {
 	const [email, setEmail] = useState<string>('');
 	const [message, setMessage] = useState<string>('');
 	const [sending, setSending] = useState<boolean>(false);
+	const [errorMessage, setErrorMessage] = useState<string>('');
+	const [status, setStatus] = useState<boolean | null>(null);
+	
+	const templateParams = {
+		from_name: email,
+		to_name: "Purplehub",
+		phone,
+		message,
+	};
+	
+	const sendEmail = async (event: React.FormEvent<HTMLButtonElement>) => {
+		event.preventDefault();
 
-	const sendEmail = async (e: React.FormEvent<HTMLButtonElement>) => {
-		e.preventDefault();
-
-		if (!email || !message || !name || !phone) {
-			alert('Please fill in all fields');
-			return;
-		}
+		if (!name) return setErrorMessage("name-error");
+		if (!phone) return setErrorMessage("phone-error");
+		if (!email) return setErrorMessage("email-error");
+		if (!message) return setErrorMessage("message-error");
 		
-		const templateParams = {
-			from_name: email,
-			to_name: "Purplehub",
-			phone,
-			message,
-		};
-
 		setSending(true);
-			await emailjs.send(
+		
+		await emailjs.send(
 				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "",
 				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "",
 				templateParams,
 				process.env.NEXT_PUBLIC_EMAILJS_USER_ID
 			)
 			.then(() => {
-				toast.success('Message sent', {
-					position: 'top-center',
-					autoClose: 3000,
-					draggable: true,
-				});
 				console.log('Email sent successfully.')
+				setStatus(true)
 			})
-			.catch(() => {
-				toast.error('Sending failed', {
-					position: 'top-center',
-					autoClose: 3000,
-					draggable: true,
-				});
+			.catch((error) => {
+				console.error(error.message)
 			})
 
 		setName('');
 		setPhone('');
 		setEmail('');
 		setMessage('');
+		console.log('SenTTTTTT');
 		setSending(false);
 	};
 
@@ -67,13 +61,14 @@ const ContactPage: React.FC = () => {
 				<h2 className="my-10 text-5xl ">Our Contact</h2>
 
 				<div className=" flex flex-col md:flex-row gap-16 w-full md:min-h-screen py-10 lg:pb-32 md:px-16 rounded-3xl items-start justify-center">
+					
 					<form
-						className="max-w-screen-sm bg-purple-300 text-gray-700 rounded-lg flex flex-1 flex-col w-full gap-6 p-8"
+						className="max-w-screen-sm bg-purple-300 text-gray-700 rounded-lg flex flex-1 flex-col w-full gap-4 p-8"
 						name="contact-form"
 						id="contact-form"
 						autoComplete="off"
 						style={{ '--ring': '255 89% 74%' } as React.CSSProperties}
-					>
+						>
 						<div className="space-y-2">
 							<Label htmlFor="name">
 								Name
@@ -81,13 +76,18 @@ const ContactPage: React.FC = () => {
 							</Label>
 							<Input
 								id="name"
-								placeholder="Your name"
+								// placeholder="Your name"
 								type="name"
 								required
 								name="name"
 								value={name}
 								onChange={(e) => setName(e.target.value)}
 							/>
+							{errorMessage === "name-error" &&
+								<p className="mt-2 text-xs text-destructive" role="alert" aria-live="polite">
+									Name is required
+								</p>
+							}
 						</div>
 
 						<div className="space-y-2">
@@ -97,13 +97,18 @@ const ContactPage: React.FC = () => {
 							</Label>
 							<Input
 								id="phone"
-								placeholder="0900-000-000"
-								type="phone"
+								// placeholder="0900-000-000"
+								type="number"
 								required
 								name="phone"
 								value={phone}
 								onChange={(e) => setPhone(e.target.value)}
 							/>
+							{errorMessage === "phone-error" &&
+								<p className="mt-2 text-xs text-destructive" role="alert" aria-live="polite">
+									Phone is required
+								</p>
+							}
 						</div>
 
 						<div className="space-y-2">
@@ -113,13 +118,18 @@ const ContactPage: React.FC = () => {
 							</Label>
 							<Input
 								id="email"
-								placeholder="your@email.com"
+								// placeholder="your@email.com"
 								type="email"
 								required
 								name="email"
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
 							/>
+							{errorMessage === "email-error" &&
+								<p className="mt-2 text-xs text-destructive" role="alert" aria-live="polite">
+									Email is required
+								</p>
+							}
 						</div>
 
 						<div className="space-y-2 flex flex-col">
@@ -129,15 +139,20 @@ const ContactPage: React.FC = () => {
 							</Label>
 							<textarea
 								name="message"
-								placeholder="Please provide message details"
+								// placeholder="Please provide message details"
 								required
-								rows={5}
+								rows={4}
 								id="message"
 								autoComplete="off"
-								className="rounded-sm p-2"
 								value={message}
 								onChange={(e) => setMessage(e.target.value)}
+								className="rounded-sm p-2 text-sm placeholder-gray-400  focus:outline-8 focus:outline-violet-400 focus:ring-2 focus:ring-red-700"
 							/>
+							{errorMessage === "message-error" &&
+								<p className="mt-2 text-xs text-destructive" role="alert" aria-live="polite">
+									Message is required
+								</p>
+							}
 						</div>
 
 						{sending ? (
@@ -162,8 +177,10 @@ const ContactPage: React.FC = () => {
 								Send
 							</Button>
 						)}
+						
+						{status && <p className='bg-green-100 text-green-700 text-center p-4 mt-4 rounded-lg'>Message sent successfully!</p>}
 					</form>
-					
+
 					{/* <ContactInfo /> */}
 				</div>
 			</div>
