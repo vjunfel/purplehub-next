@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import './globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import '../lib/fontawesome';
+import { ToastContainer } from 'react-toastify';
 
 const geistSans = localFont({
 	src: './fonts/GeistVF.woff',
@@ -37,6 +38,7 @@ export default function RootLayout({
 			<body
 				className={`${Poppins.variable} ${geistSans.variable} ${MarckScript.variable} antialiased bg-gray-50 text-gray-900`}
 			>
+				<ToastContainer />
 				<Navbar />
 				<main className="min-h-screen">{children}</main>
 				<Footer />
