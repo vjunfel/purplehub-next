@@ -5,7 +5,7 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { LoaderCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
-// import ContactInfo from '@/components/ContactInfo';
+import ContactInfo from '@/components/ContactInfo';
 
 const ContactPage: React.FC = () => {
 	const [name, setName] = useState<string>('');
@@ -61,9 +61,8 @@ const ContactPage: React.FC = () => {
 				<h2 className="my-10 text-5xl ">Our Contact</h2>
 
 				<div className=" flex flex-col md:flex-row gap-16 w-full md:min-h-screen py-10 lg:pb-32 md:px-16 rounded-3xl items-start justify-center">
-					
 					<form
-						className="max-w-screen-sm bg-purple-300 text-gray-700 rounded-lg flex flex-1 flex-col w-full gap-4 p-8"
+						className="order-2 md:order-1 max-w-screen-sm bg-purple-300 text-gray-700 rounded-lg flex flex-1 flex-col w-full gap-4 p-8"
 						name="contact-form"
 						id="contact-form"
 						autoComplete="off"
@@ -134,7 +133,7 @@ const ContactPage: React.FC = () => {
 
 						<div className="space-y-2 flex flex-col">
 							<Label htmlFor="message">
-								Message details
+								Message
 								<span className="text-destructive">*</span>
 							</Label>
 							<textarea
@@ -181,7 +180,7 @@ const ContactPage: React.FC = () => {
 						{status && <p className='bg-green-100 text-green-700 text-center p-4 mt-4 rounded-lg'>Message sent successfully!</p>}
 					</form>
 
-					{/* <ContactInfo /> */}
+					<ContactInfo />
 				</div>
 			</div>
 		</div>

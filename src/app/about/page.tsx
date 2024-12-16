@@ -30,12 +30,17 @@ const AboutPage: React.FC = () => {
 									{item.description.paragraph.par2}
 								</p>
 								<p className="text-lg lg:text-xl font-medium">
-									{item.description.paragraph.par3}
+									{item.description.paragraph.par3.sub}
+									
+									<ol className='text-lg mt-5'>
+										{item.description.paragraph.par3.items.map((item, index) => (
+										<li key={index}>{item}</li>
+									))}
+									</ol>
 								</p>
 							</div>
 						))}
 					</div>
-					
 				</div>
 			</div>
 		</div>

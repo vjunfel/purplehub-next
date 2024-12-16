@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
 					<Link href="/menu">Menu</Link>
 				</li>
 				<li className="border-b-2 border-transparent hover:border-purple-300 py-1">
-					<Link href="/about">About</Link>
+					<Link href="/about">About Us</Link>
 				</li>
 				<li className="border-b-2 border-transparent hover:border-purple-300 py-1">
 					<Link
