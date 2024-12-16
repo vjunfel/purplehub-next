@@ -130,17 +130,38 @@ export const storeData = [
 
 export const aboutData = [
 	{
-		name: "Our History",
+		title: "Our History",
+		branch: "Main branch",
 		address: "1340 Vascquez St., Corner Gimena, Brgy. Washington, Surigao, SDN",
+		email: "btvp79@yahoo.com",
+		phone: "09175300549 / 09199503051",
+		time: "9:00 AM - 7:00 PM",
 		description: {
 			paragraph: {
-				par1: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus quasi labore debitis eaque dicta, dolores officiis excepturi sunt incidunt facilis ad atque consequatur! Tenetur perferendis, corporis porro in modi tempora? Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+				par1: "The institution was established in 2021 and based in Surigao Del Norte, Philippines. Our primary purpose in creating this business style is primarily of delivering quality baked goods sourced from local suppliers and farmers.",
 				par2: 
-				"Accusamus quasi labore debitis eaque dicta, dolores officiis excepturi sunt incidunt facilis ad atque consequatur! Tenetur perferendis, corporis porro in modi tempora.",
-				par3: 
-				"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, sequi dolor! Aspernatur aperiam harum iste tempora quidem distinctio tempore hic placeat animi ex totam provident consequuntur illo cumque pariatur amet, dolore enim reprehenderit ea quisquam dignissimos? Harum autem inventore totam!"
+				"Our store provides a variety of baked goods, primarily cakes. In line with our motivation of producing freshly make merchandise, baking  is made within the premises of the retailing store, providing the ideal goods to our costumers.",
+				par3: {
+					sub: "To attain our functional objectives, the management is determined and committed to the SOM established and implemented and contiually improves its effectiveness through the following:",
+					items:[
+						"1. Ensure an established Food Safety Policy.",
+						"2. Communicate to the organiztion the importance of meeting customer requirements as well as the statutory guidelines.",
+						"3. established Food Safety/Quality objectives.",
+						"4. Conduct of Quarterly Management Reviews.",
+						"5. Strengthening the scientific know-how of Personnel.",
+						"6. Provision of all necessary resources to carry out the operations."
+					]
+				}
 			}
-		}
+		},
+		Mession: "Our commitment is of producing homemade-quality baked products upholding values not only of simplicity but also, community by supporting local farmers.",
+		Vission: "We aim to be part of every locality we serve as trusted institution creating products with standard and love.",
+		Objectives: [
+			"To build a healty relationship with our customers and distributors.",
+			"Provide goods and services to our consumers with enthusiasm and professionalism",
+			"Profitably supply with affordable and reasonable prices of our merchandise",
+			"To help the community, especially our farmers, to earn a livelihood thus supporting local economy."
+		],
 	}
 ]
 
