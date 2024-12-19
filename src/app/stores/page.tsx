@@ -6,9 +6,9 @@ import store from '../../../public/images/store.jpg'
 
 const StoresLocation: React.FC = () => {
 	return (
-		<div className='bg-gradient-to-r from-purple-500 from-10% via-purple-700 via-50% to-purple-950 text-white p-4 lg:p-0'>
+		<div className='bg-gradient-to-r from-purple-500 from-10% via-purple-700 via-50% to-purple-950 text-white px-4 lg:p-0'>
 			<div className='pt-[80px] lg:pt-[160px] w-full max-w-screen-xl mx-auto min-h-screen flex justify-center items-center flex-col '>
-				<h2 className="my-10 text-5xl ">Our Stores</h2>
+				<h2 className="my-10 text-5xl text-white">Our Stores</h2>
 				
 				<div className='flex flex-col md:flex-row gap-16 w-full h-full py-10 lg:pb-32 md:px-16 rounded-3xl items-start'>
 					<div className="flex flex-col flex-1 gap-10">
