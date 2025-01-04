@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { useRouter, useParams } from 'next/navigation';
+import { useRouter, useParams, notFound } from 'next/navigation';
 import { menuData } from '@/constants';
-import NotFound from '@/app/not-found/page';
 import Image from 'next/image';
 
 export default function ProductInfo() {
@@ -13,7 +12,7 @@ export default function ProductInfo() {
 	const product = menuData.find((item) => item.slug === slug);
 
 	if (!product) {
-		return <NotFound />;
+    notFound();
 	}
 
 	return (
