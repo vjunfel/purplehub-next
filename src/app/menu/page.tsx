@@ -6,7 +6,7 @@ import MenuCard from '@/components/MenuCard';
 import { menuData } from '@/constants';
 
 function MenuPage() {
-const router = useRouter();
+  const router = useRouter();
 
 return (
 	<div className="pt-[80px] lg:pt-[160px] w-full min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-purple-500 from-10% via-purple-700 via-50% to-purple-950">

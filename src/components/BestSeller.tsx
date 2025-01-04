@@ -36,6 +36,7 @@ const BestSeller = () => {
 						<div className="w-full absolute bottom-[-160px] group-hover:bottom-0 h-40 flex items-center justify-center group-hover:opacity-100 transition-position duration-200 bg-purple-700 bg-opacity-90 text-white text-xl z-20">
 							More Info
 						</div>
+
             
             <div className='flex flex-col items-end justify-start h-40 p-6'>
               <h3 className="w-full text-2xl text-start mb-4">{item.name}</h3>
