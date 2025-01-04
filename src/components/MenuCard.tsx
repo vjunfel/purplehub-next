@@ -7,16 +7,16 @@ interface MenuCardProps {
     width: number;
     height: number;
     className?: string;
-    title: string;
-    description: string;
+    title?: string;
+    description?: string;
 }
 
-const MenuCard: React.FC<MenuCardProps> = React.memo(({
+const MenuCard: React.FC<MenuCardProps> = (({
     src,
     alt,
     width,
     height,
-    className = '',
+    className,
     title,
     description,
 }) => {
