@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import Logo from '../../public/images/logo_nav.jpg'
+import Link from 'next/link'
 
 const Footer: React.FC = () => {
 	return (
@@ -12,7 +13,6 @@ const Footer: React.FC = () => {
 					<div className='flex justify-center md:justify-start'>
 						<Image 
 							src={Logo} 
-							// src="/images/logo_nav.jpg"
 							width={80} 
 							height={80}
 							alt="Logo" 
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
 				<div className="flex flex-col justify-center items-center w-full gap-2  md:justify-center md:items-start  md:flex-row"> 
 					<ul className="flex flex-col justify-center items-center md:justify-start md:items-start gap-2 flex-1">
 						<li><a href="#" className="hover:underline text-sm md:text-[16px] text-gray-200">Product Care</a></li>
-						<li><a href="#" className="hover:underline text-sm md:text-[16px] text-gray-200">Contact Us</a></li>
+						<li><Link href="/contact" className="hover:underline text-sm md:text-[16px] text-gray-200">Contact Us</Link></li>
 					</ul>
 					<ul className="flex flex-col justify-center items-center md:justify-center md:items-start gap-2 flex-1">
 						<li><a href="#" className="hover:underline text-sm md:text-[16px] text-gray-200">Terms & Conditions</a></li>
