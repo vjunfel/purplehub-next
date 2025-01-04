@@ -11,7 +11,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ setIsOpen }) => {
 	const pathname = usePathname();
 	
 	return (
-		<div className='absolute top-0 right-0 flex flex-col justify-start bg-white min-w-64 max-w-[500px] min-h-screen shadow'>
+		<div className='absolute top-0 right-0 flex flex-col justify-start bg-white min-w-64 max-w-[500px] min-h-screen shadow z-10'>
 			<div className='w-full flex items-center justify-start px-10 py-6'>
 				<X onClick={() => setIsOpen(active => !active)} className=' w-6 h-6 cursor-pointer items-end justify-end active:bg-purple-100 rounded-full'/>
 			</div>

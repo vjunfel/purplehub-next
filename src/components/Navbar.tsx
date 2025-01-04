@@ -16,8 +16,8 @@ const Navbar: React.FC = () => {
 	}
 	
 	return (
-		<nav className={isMobile ? ("font-[family-name:var(--font-poppins)] fixed z-10 w-full h-[80px] row-start-3 flex flex-wrap items-center justify-between xl:px-40 md:px-10 px-5 bg-gradient-to-r from-purple-500 from-10% via-purple-700 via-50% to-purple-950") : (
-			"font-[family-name:var(--font-poppins)] fixed z-10 w-full h-[80px] row-start-3 flex flex-wrap items-start justify-between xl:px-40 md:px-10 px-5 bg-gradient-to-r from-purple-500 from-10% via-purple-700 via-50% to-purple-950 pt-4"
+		<nav className={isMobile ? ("font-[family-name:var(--font-poppins)] fixed z-30 w-full h-[80px] row-start-3 flex flex-wrap items-center justify-between xl:px-40 md:px-10 px-5 bg-gradient-to-r from-purple-500 from-10% via-purple-700 via-50% to-purple-950") : (
+			"font-[family-name:var(--font-poppins)] fixed z-30 w-full h-[80px] row-start-3 flex flex-wrap items-start justify-between xl:px-40 md:px-10 px-5 bg-gradient-to-r from-purple-500 from-10% via-purple-700 via-50% to-purple-950 pt-4"
 		)}>
 			<ul className="hidden lg:flex flex-row text-white  gap-12 flex-1 items-center my-2">
 				<li className="border-b-2 border-transparent hover:border-purple-300 py-1 ">
