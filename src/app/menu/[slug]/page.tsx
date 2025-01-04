@@ -1,43 +1,52 @@
-"use client";
+'use client';
 import React from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { menuData } from '@/constants';
+import NotFound from '@/app/not-found/page';
+import Image from 'next/image';
 
-export default function ProductPage() {
-  const router = useRouter();
-  const params = useParams();
-  const slug = params.slug;
+export default function ProductInfo() {
+	const router = useRouter();
+	const params = useParams();
+	const slug = params.slug;
 
-  const product = menuData.find((item) => item.slug === slug);
+	const product = menuData.find((item) => item.slug === slug);
 
-  if (!product) {
-    return (
-      <div className="text-center py-20">
-        <h1 className="text-red-500 text-2xl mb-4">Product not found</h1>
-      </div>
-    );
-  }
+	if (!product) {
+		return <NotFound />;
+	}
 
-  return (
-    <div className="min-h-screen flex flex-col items-center justify-center py-10 px-4 bg-gradient-to-r from-purple-500 from-10% via-purple-700 via-50% to-purple-950">
-      <button
-        onClick={() => router.back()}
-        className="mb-4 text-purple-700 hover:text-purple-900"
-      >
-        &larr; Go Back
-      </button>
-      <div className="max-w-4xl w-full flex flex-col md:flex-row items-center p-6 rounded shadow-md bg-white">
-        <img
-          src={product.imgSrc}
-          alt={product.alt}
-          className="w-full md:w-1/2 h-auto object-cover mb-4 md:mb-0"
-        />
-        <div className="md:ml-6 flex flex-col justify-center">
-          <h1 className="text-3xl font-bold mb-4 text-gray-900">{product.name}</h1>
-          <p className="text-lg text-gray-700 mb-4">{product.description}</p>
-          <p className="text-xl text-gray-900">Price: ₱{product.price}</p>
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div className="px-4 md:px-8 lg:px-12">
+			<div className="w-full flex flex-col justify-between items-center pb-20 pt-[80px] lg:pt-[180px]">
+				<div className=" max-w-sm md:max-w-md lg:max-w-6xl w-full flex flex-col gap-4 md:gap-8 xl:gap-28 lg:flex-row items-center">
+					<Image
+						src={product.imgSrc}
+						alt={product.alt}
+						width={600}
+						height={600}
+						className="flex-1 w-full object-cover md:mb-0"
+					/>
+					<div className="w-full h-full flex-1  flex flex-col justify-center">
+						<h1 className="text-4xl font-bold mb-4 text-gray-900">
+							{product.name}
+						</h1>
+						<p className="text-lg text-gray-700 mb-8">
+							{product.description}
+						</p>
+						<p className="text-2xl text-gray-900">
+							Price: &nbsp;<strong>₱{product.price}</strong>
+						</p>
+					</div>
+				</div>
+
+				<button
+					onClick={() => router.back()}
+					className=" text-purple-700 hover:text-purple-900 pt-12 lg:pt-2"
+				>
+					&larr; Go Back
+				</button>
+			</div>
+		</div>
+	);
 }

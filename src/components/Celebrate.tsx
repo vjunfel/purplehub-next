@@ -5,7 +5,7 @@ import celebrateImage from '../../public/images/celebrate.jpg'
 
 const Celebrate: React.FC = () => {
 	return (
-    <div className="max-w-screen-2xl w-full flex p-5 lg:flex-col md:p-10 lg:p-20 xl:pb-32">
+    <div className="max-w-screen-2xl w-full flex p-4 lg:flex-col md:p-8 lg:p-20 xl:pb-32">
       <div className='flex flex-col md:flex-row gap-16 bg-purple-300 w-full p-10 md:p-16 rounded-3xl'>
         <div className="flex-1 flex md:justify-start justify-center">
           <Image
